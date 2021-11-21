@@ -1,0 +1,498 @@
+/* design du haut de la page*/
+/* importation de la police d'écriture pour la barre de navigation*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* importation de la police d'écriture pour le big title*/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+*{
+font-family: 'Montserrat';
+}/* composant de la page*/
+body{
+    margin: 0 auto; /* enlever la marge aplliqué à l'ensemble de la page*/
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* tête de page*/
+
+header.header{
+    display: flex; /* aligner l'ensemble*/
+    align-items: center; /* centrer*/
+    background-color:none /* couleur de la balise*/
+}
+
+
+section.top-page {
+    background: url('../images/test.jpg');/*image d'arrière plan*/
+    background-size: cover;/* ne déforme pas la page de l'arrière plan*/
+    height: 10vh; /* hauteur de l'image de l'arrière plan*/
+    padding: 35px ;
+}
+
+/*menu déroulant horizontal*/
+/* Principal */
+#menu{
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0 0;
+    list-style: none;
+    background: #111;
+    background: -moz-linear-gradient(#444, #111);
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444));
+    background: -webkit-linear-gradient(#444, #111);
+    background: -o-linear-gradient(#444, #111);
+    background: -ms-linear-gradient(#444, #111);
+    background: linear-gradient(#444, #111);
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    -moz-box-shadow: 0 2px 1px #9c9c9c;
+    -webkit-box-shadow: 0 2px 1px #9c9c9c;
+    box-shadow: 0 2px 1px #9c9c9c;
+}
+
+#menu li{
+    float: left;
+    padding: 0 0 10px 0;
+    position: relative;
+}
+
+#menu a{
+    float: left;
+    height: 25px;
+    padding: 0 25px;
+    color: #999;
+    text-transform: uppercase;
+    font: bold 12px/25px Arial, Helvetica;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000;
+}
+
+#menu li:hover > a{
+    color: #fafafa;
+}
+
+*html #menu li a:hover{ /* IE6 */
+    color: #fafafa;
+}
+
+#menu li:hover > ul{
+    display: block;
+}
+
+/* Sous-menu */
+
+#menu ul{
+list-style: none;
+margin: 0;
+padding: 0;
+display: none;
+position: absolute;
+top: 35px;
+left: 0;
+z-index: 99999;
+background: #444;
+background: -moz-linear-gradient(#444, #111);
+background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444));
+background: -webkit-linear-gradient(#444, #111);
+background: -o-linear-gradient(#444, #111);
+background: -ms-linear-gradient(#444, #111);
+background: linear-gradient(#444, #111);
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+
+#menu ul li{
+float: none;
+margin: 0;
+padding: 0;
+display: block;
+-moz-box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+-webkit-box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+}
+
+#menu ul li:last-child{
+-moz-box-shadow: none;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+
+#menu ul a{
+padding: 10px;
+height: auto;
+line-height: 1;
+display: block;
+white-space: nowrap;
+float: none;
+text-transform: none;
+}
+
+*html #menu ul a{ /* IE6 */
+    height: 10px;
+    width: 150px;
+}
+
+*:first-child+html #menu ul a{ /* IE7 */
+    height: 10px;
+    width: 150px;
+}
+
+#menu ul a:hover{
+    background: #0186ba;
+    background: -moz-linear-gradient(#04acec,  #0186ba);
+    background: -webkit-gradient(linear, left top, left bottom, from(#04acec), to(#0186ba));
+    background: -webkit-linear-gradient(#04acec,  #0186ba);
+    background: -o-linear-gradient(#04acec,  #0186ba);
+    background: -ms-linear-gradient(#04acec,  #0186ba);
+    background: linear-gradient(#04acec,  #0186ba);
+}
+
+#menu ul li:first-child a{
+-moz-border-radius: 5px 5px 0 0;
+-webkit-border-radius: 5px 5px 0 0;
+border-radius: 5px 5px 0 0;
+}
+
+#menu ul li:first-child a:after{
+content: '';
+position: absolute;
+left: 30px;
+top: -8px;
+width: 0;
+height: 0;
+border-left: 5px solid transparent;
+border-right: 5px solid transparent;
+border-bottom: 8px solid #444;
+}
+
+#menu ul li:first-child a:hover:after{
+border-bottom-color: #3a5b68;
+}
+
+#menu ul li:last-child a{
+-moz-border-radius: 0 0 5px 5px;
+-webkit-border-radius: 0 0 5px 5px;
+border-radius: 0 0 5px 5px;
+}
+
+/* Rétablissement du flottement */
+#menu:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+* html #menu             { zoom: 1; } /* IE6 */
+*:first-child+html #menu { zoom: 1; } /* IE7 */
+
+
+
+
+
+/* page de bienvenue (landing page)*/
+
+.landing-page{
+    position: relative;
+    padding: 0px 50px;/* espace hauteur et espace de la bordure*/
+
+}
+
+
+.big-title{
+    color: white; /* couleur du texte*/
+    font-size: 'Abril FatFace';
+    font-size: 20px;/* taille de la police*/
+    font-weight: none;
+   
+}
+
+.big-title-test{
+    padding-top: 30px ;
+    text-align: center;
+    position: relative;
+    color:#ce9647; /* couleur du texte*/
+    font-size: 'Arial';
+    font-size: 40px;/* taille de la police*/
+    font-weight: none;   
+    
+}
+
+.scroll-down{
+    color:gray;
+    text-decoration:none;
+    position: absolute;
+    bottom: 10;
+}
+
+
+/* Menu de navigation*/
+nav.nav{
+    display: flex; /* aligner les mots de la navigation*/
+    justify-content: space-between; /* espacement entre les mots*/
+    list-style: none; /* enlever les puces*/
+    background-color:none; /*barre */
+    width: 100%;
+    margin-left: 30px; /* espace entre le logo et le texte*/
+}
+
+nav.nav li a
+{
+    color:white; /* couleur des mots de navigation*/
+    text-decoration: none;
+}
+
+/* SERVICES*/
+
+.services{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 50px;
+}
+
+.service-item {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*
+.delivery-icon{
+    font-size: 50px;
+    color: chartreuse;
+    
+}*/
+
+.service-details{
+    font-weight: 600;
+    width: 200px;
+    text-align: center;
+}
+
+/* Nos meilleurs ventes*/
+
+.section-title{
+    font-size: 50px;
+    font-family: 'Abril FatFace';
+    font-weight: 100;
+    position: relative;
+}
+
+.section-title::before {
+content:"";
+position:absolute;
+background-color:white;
+width: 50px;
+height: 7px;
+bottom:0;
+}
+
+
+.best-items{
+    margin: 50px;
+    background-color:#ce9647;
+}
+
+
+.best-plants{
+    background-color:white;
+    min-height: 500px;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+
+.plant-box{
+    
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.no-grid{
+    min-width: 350px;
+    height: 500px;
+    flex:1; /* taille des boites maximum possible*/
+}
+
+.plant1{
+    background-image: url(../images/nos_meilleures_ventes/1.jpg);  
+}
+
+.plant2{
+    background-image: url(../images/nos_meilleures_ventes/2.jpg);  
+}
+
+.plant3{
+    background-image: url(../images/nos_meilleures_ventes/3.jpg);  
+}
+
+.plant4{
+    background-image: url(../images/nos_meilleures_ventes/4.jpg);  
+}
+
+.plant-details{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color:#F5F0E9;
+    padding: 5px 20px;
+}
+
+.plant-name{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 3px;
+}
+
+.plant-price{
+    color: body, div, h1, form, fieldset, input, textarea {
+        margin: 0; padding: 0; border: 0; outline: none;
+    }
+    
+    html {
+        height: 100%;
+    }
+    
+    body {
+        background: #728eaa;
+        background: -moz-linear-gradient(top, #25303C 0%, #728EAA 100%); /* firefox */	
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#25303C), color-stop(100%,#728EAA)); /* webkit */
+        font-family: sans-serif; 
+    }
+    
+    #contact {
+        width: 430px; margin: 60px auto; padding: 60px 30px;
+        background: #c9d0de; border: 1px solid #e1e1e1;
+        -moz-box-shadow: 0px 0px 8px #444;
+        -webkit-box-shadow: 0px 0px 8px #444;
+    }
+    
+    h1 {
+        font-size: 35px; color: #445668; text-transform: uppercase;
+        text-align: center; margin: 0 0 35px 0; text-shadow: 0px 1px 0px #f2f2f2;
+    }
+    
+    label {
+        float: left; clear: left; margin: 11px 20px 0 0; width: 95px;
+        text-align: right; font-size: 16px; color: #445668; 
+        text-transform: uppercase; text-shadow: 0px 1px 0px #f2f2f2;
+    }
+    
+    input {
+        width: 260px; height: 35px; padding: 5px 20px 0px 20px; margin: 0 0 20px 0; 
+        background: #5E768D;
+        background: -moz-linear-gradient(top, #546A7F 0%, #5E768D 20%); /* firefox */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#546A7F), color-stop(20%,#5E768D)); /* webkit */
+        border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+        -moz-box-shadow: 0px 1px 0px #f2f2f2;-webkit-box-shadow: 0px 1px 0px #f2f2f2;
+        font-family: sans-serif; font-size: 16px; color: #f2f2f2; text-transform: uppercase; text-shadow: 0px -1px 0px #334f71; 
+    }
+        input::-webkit-input-placeholder  {
+            color: #a1b2c3; text-shadow: 0px -1px 0px #38506b;  
+        }
+        input:-moz-placeholder {
+            color: #a1b2c3; text-shadow: 0px -1px 0px #38506b; 
+        }
+    
+    textarea {
+        width: 260px; height: 170px; padding: 12px 20px 0px 20px; margin: 0 0 20px 0; 
+        background: #5E768D;
+        background: -moz-linear-gradient(top, #546A7F 0%, #5E768D 20%); /* firefox */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#546A7F), color-stop(20%,#5E768D)); /* webkit */
+        border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+        -moz-box-shadow: 0px 1px 0px #f2f2f2;-webkit-box-shadow: 0px 1px 0px #f2f2f2;
+        font-family: sans-serif; font-size: 16px; color: #f2f2f2; text-transform: uppercase; text-shadow: 0px -1px 0px #334f71; 
+    }
+        textarea::-webkit-input-placeholder  {
+            color: #a1b2c3; text-shadow: 0px -1px 0px #38506b;  
+        }
+        textarea:-moz-placeholder {
+            color: #a1b2c3; text-shadow: 0px -1px 0px #38506b; 
+        }
+        
+    input:focus, textarea:focus {
+        background: #728eaa;
+        background: -moz-linear-gradient(top, #668099 0%, #728eaa 20%); /* firefox */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#668099), color-stop(20%,#728eaa)); /* webkit */
+    }
+    
+    input[type=submit] {
+        width: 185px; height: 52px; float: right; padding: 10px 15px; margin: 0 15px 0 0;
+        -moz-box-shadow: 0px 0px 5px #999;-webkit-box-shadow: 0px 0px 5px #999;
+        border: 1px solid #556f8c;
+        background: -moz-linear-gradient(top, #718DA9 0%, #415D79 100%); /* firefox */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#718DA9), color-stop(100%,#415D79)); /* webkit */
+        cursor: pointer;
+    };
+    font-weight: 800;
+    line-height: 3px;
+    font-size: 14px;
+}
+
+/*NOS PLANTES*/
+.all-plants{
+    margin: 50px;
+    background-color:#ce9647;
+}
+
+.plant-grid{
+    display: grid;
+    min-height: 150vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 400px);
+}
+
+.plant-grid1{
+    background-image: url(../images/nos_plantes/1.jpg);
+    grid-column:  1/3;
+    grid-row: 1/3;
+}
+
+.plant-grid2{
+    background-image: url(../images/nos_plantes/2.jpg);
+    grid-column:  3/5;
+}
+
+.plant-grid3{
+    background-image: url(../images/nos_plantes/3.jpg);
+    grid-column:  3/5;
+}
+
+.plant-grid4{
+    background-image: url(../images/nos_plantes/4.jpg);
+    grid-column: 1;
+    grid-row: 3/5;
+}
+
+.plant-grid5{
+    background-image: url(../images/nos_plantes/5.jpg);
+    grid-column: 2/4;
+    grid-row: 3/5;
+}
+
+.plant-grid6{
+    background-image: url(../images/nos_plantes/6.jpg);
+    grid-column: 4;
+    grid-row: 3/5;
+}
+
+/* pied de page*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 100px;
+    font-weight: 600;
+}
+
+footer a.cgv{
+    text-decoration: none;
+    color: black;
+}

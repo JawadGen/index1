@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- intégrer le fichier styles.css -->    
+    <link rel="stylesheet" href="css/styles_contact.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+<!-- onglet de la page Internet --> 
+<title>Contact</title>
+</head>
+<body style="background-color:none;">
+   <!-- élement en haut de la page --> 
+   
+   <section class="top-page">
+       <header class="header">
+           <nav class="nav"><!-- les boutons du site --> 
+               <ul id="menu">
+                   <li><a href="index.html">Page d'acceuil</a></li>
+                   <li><a href="galerie.html">GALERIE</a></li>  
+                   <li><a href="presentation.html">Présentation</a></li>
+                   <li><a href="#">Livre d'or</a></li>
+                   <li><a href="#">Contact</a></li>
+               </ul>
+           </nav>
+       </header>
+       <div class="landing-page"> -------------------------------------------------------------------------------------------------------------------</div>
+       <div class="contactez-nous">
+        <h1>Contact</h1>
+        <p>Donner votre avis sur mes peintures</p>
+        <form action="/page-traitement-donnees" method="post">
+          <div>
+            <label for="nom">Votre nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Martin" required>
+          </div>
+          <div>
+            <label for="email">Votre e-mail</label>
+            <input type="email" id="email" name="email" placeholder="illusion.verite@yahoo.com" required>
+          </div>
+          <div>
+            <label for="sujet">Quel est le sujet de votre message ?</label>
+            <select name="sujet" id="sujet" required>
+                <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
+                <option value="probleme-compte">Acheter une toile</option>
+                <option value="question-produit">Question à propos d’une toile</option>
+                <option value="suivi-commande">Suivi de commande</option>
+                <option value="autre">Autre...</option>
+             </select>
+          </div>
+          <div>
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" placeholder="Bonjour, je vous contacte car...." required></textarea>
+          </div>
+          <div>
+            <button type="submit">Envoyer</button>
+          </div>
+        </form>
+      </div>
